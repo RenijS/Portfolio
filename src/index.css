@@ -16,10 +16,23 @@ code {
     monospace;
 }
 
-#resume-section {
+#resume-section,
+label {
   color: lightslategrey;
 }
 
 #resume-section .svg-inline--fa {
   margin-right: 0.4rem;
+}
+
+#contact-sect input,
+#contact-sect textarea {
+  border-bottom: 1px solid darkgray;
+  outline: none;
+  width: 100%;
+}
+
+#contact-sect input:focus,
+#contact-sect textarea:focus {
+  border-bottom: 2px solid black;
 }

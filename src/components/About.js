@@ -1,6 +1,24 @@
 import React from "react";
 
 export default function About() {
+  const skills = [
+    "Java",
+    "JavaScript",
+    "Kotlin",
+    "HTML",
+    "CSS",
+    "Python",
+    "NodeJS",
+    "MongoDB",
+    "React",
+    "Agile",
+    "Bootstrap",
+    "Tailwind",
+    "JavaFX",
+    "LISP",
+    "IT Helpdesk",
+  ];
+
   return (
     <div id="about-sect" className="flex max-h-screen gap-16 py-16 box-content">
       <div className="w-full">
@@ -19,11 +37,14 @@ export default function About() {
             through work and university experience.
           </p>
         </div>
-        <ul id="skills">
-          <li>JavaScript</li>
-          <li>Java</li>
-          <li>Kotlin</li>
-        </ul>
+        <div>
+          <span>Tech Exposure +</span>
+          <ul id="skills" className="flex flex-wrap">
+            {skills.map((skill) => (
+              <li className="mr-4">{skill}</li>
+            ))}
+          </ul>
+        </div>
         <div className="flex gap-2.5">
           <button className="py-1 px-1 border border-zinc-400 rounded-xl">
             LinkedIn
