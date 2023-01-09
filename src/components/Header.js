@@ -3,12 +3,16 @@ import React from "react";
 export default function Header() {
   window.onscroll = () => {
     if (window.pageYOffset > document.querySelector("#header-card").offsetTop) {
-      document.querySelector("#header-card").classList.remove("absolute");
+      document
+        .querySelector("#header-card")
+        .classList.remove("absolute", "text-white");
       document
         .querySelector("#header-card")
         .classList.add("bg-white", "fixed", "text-black");
     } else {
-      document.querySelector("#header-card").classList.add("absolute");
+      document
+        .querySelector("#header-card")
+        .classList.add("absolute", "text-white");
       document
         .querySelector("#header-card")
         .classList.remove("bg-white", "fixed", "text-black");

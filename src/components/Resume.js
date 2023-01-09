@@ -29,24 +29,30 @@ export default function Resume() {
   ];
   return (
     <div id="resume-section">
-      <h3>Resume</h3>
-      <div id="img-contain">
-        <img src="" alt="" />
-      </div>
-      <div id="resume-info">
-        <div>
-          <h3>Work Experience</h3>
-          {experiences.length != 0 &&
-            experiences.map((exp) => {
-              return <WorkCard exp={exp} />;
-            })}
+      <h3 className=" text-5xl text-black text-center mb-9">Resume</h3>
+      <div className="flex gap-16">
+        <div id="img-contain" className="">
+          <img
+            src="/img/test.jpg"
+            alt=""
+            className="max-h-screen w-full object-cover"
+          />
         </div>
-        <div>
-          <h3>Education</h3>
-          {education.length != 0 &&
-            education.map((edu) => {
-              return <EducationCard edu={edu} />;
-            })}
+        <div id="resume-info" className="w-3/4">
+          <div>
+            <h3 className="text-3xl text-black mb-6">Work Experience</h3>
+            {experiences.length != 0 &&
+              experiences.map((exp) => {
+                return <WorkCard exp={exp} />;
+              })}
+          </div>
+          <div>
+            <h3 className="text-3xl text-black mb-6">Education</h3>
+            {education.length != 0 &&
+              education.map((edu) => {
+                return <EducationCard edu={edu} />;
+              })}
+          </div>
         </div>
       </div>
     </div>
