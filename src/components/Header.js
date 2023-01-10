@@ -31,7 +31,6 @@ export default function Header() {
       </div>
       <ul id="header-list" className="w-128 flex justify-evenly">
         <li>Home</li>
-        <li>About</li>
         <li>Portfolio</li>
         <li>Resume</li>
         <li>Contact</li>

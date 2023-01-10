@@ -11,7 +11,6 @@ function App() {
       <Header />
       <Top />
       <div className="px-16">
-        <About />
         <Portfolio />
         <Resume />
         <Contact />
