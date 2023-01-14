@@ -7,7 +7,7 @@ export default function TopElements() {
     <div id="top-ele-container" className="flex flex-row items-center gap-9">
       <div className="flex flex-col items-center text-lg">
         <div className="w-48 h-44 rounded-t-full overflow-hidden object-cover">
-          <img src="img/myImg.jpg" alt="" className="" />
+          <img src="img/myImg.jpg" alt="" />
         </div>
         <span>Hello</span>
         <span>I'm Renij Shrestha</span>
@@ -15,7 +15,7 @@ export default function TopElements() {
           View <FontAwesomeIcon icon={faArrowDown} />
         </button>
       </div>
-      <span className="w-96 tracking-wide italic opacity-75">
+      <span className="w-96 tracking-wide italic text-gray-300">
         Recent IT graduate with a keen interest in software engineering.
         Developed and demonstrated a reliable work ethic and adaptability
         through work and university experience.

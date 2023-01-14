@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <div
       id="header-card"
-      className="flex justify-between items-center text-white w-full absolute py-2"
+      className="flex justify-between items-center text-white w-full absolute py-2 z-10"
     >
       <div
         id="logo"
