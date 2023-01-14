@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ProjectCard(props) {
   return (
-    <div className="grid grid-cols-2 gap-10">
+    <>
       {props.projInfo.map((info) => {
         return (
           <div className="text-center">
@@ -10,7 +10,11 @@ export default function ProjectCard(props) {
               <img
                 src={info.img}
                 alt=""
-                className="rounded-2xl h-80 w-full object-cover"
+                className={
+                  props.activeState === "web"
+                    ? "rounded-2xl h-80 w-full object-cover"
+                    : "rounded-2xl h-114 w-full object-cover"
+                }
               />
               <div className="absolute inset-0 bg-black/[.74] text-white collapse group-hover/imgContain:visible">
                 <div className="grid grid-rows-2 grid-cols-2 h-full text-lg">
@@ -18,18 +22,24 @@ export default function ProjectCard(props) {
                     href={info.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex justify-center items-center hover:cursor-pointer hover:text-xl hover:underline"
+                    className={
+                      info.live !== ""
+                        ? "flex justify-center items-center hover:cursor-pointer hover:text-xl hover:underline"
+                        : "col-span-2 flex justify-center items-center hover:cursor-pointer hover:text-xl hover:underline"
+                    }
                   >
                     <span className="">Github</span>
                   </a>
-                  <a
-                    href={info.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex justify-center items-center border-l-4 border-gray-400 hover:cursor-pointer hover:text-xl hover:underline"
-                  >
-                    <span className="">Live Preview</span>
-                  </a>
+                  {info.live !== "" && (
+                    <a
+                      href={info.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex justify-center items-center border-l-4 border-gray-400 hover:cursor-pointer hover:text-xl hover:underline"
+                    >
+                      <span className="">Live Preview</span>
+                    </a>
+                  )}
                   <div className="col-span-2 flex flex-col justify-center items-center border-t-4 border-gray-400">
                     <span className="">Tech Used:</span>
                     <ul className="flex gap-4">
@@ -46,6 +56,6 @@ export default function ProjectCard(props) {
           </div>
         );
       })}
-    </div>
+    </>
   );
 }

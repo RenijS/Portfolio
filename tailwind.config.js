@@ -7,6 +7,7 @@ module.exports = {
         90: "90%",
       },
       spacing: {
+        114: "28rem",
         128: "32rem",
         144: "36rem",
       },

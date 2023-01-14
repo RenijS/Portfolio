@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ProjectCard from "./Portfolio/ProjectCard";
+import PhotoCard from "./Portfolio/PhotoCard";
 
 export default function Portfolio() {
   const [activeState, setActiveState] = useState("web");
@@ -10,11 +11,27 @@ export default function Portfolio() {
 
   const mobInfo = [
     {
-      title: "",
-      desc: "",
-      techs: [],
-      img: "",
-      github: "",
+      title: "Workout App",
+      desc: "An app where user can set up their own time, check their BMI, check workout history.",
+      techs: ["Kotlin", "Sqlite", "Android Studio"],
+      img: "/img/mobile/workout.png",
+      github: "https://github.com/RenijS/Android_WorkoutApp_Kotlin",
+      live: "",
+    },
+    {
+      title: "Drawing App",
+      desc: "A drawing app like Etch A Sketch",
+      techs: ["Kotlin", "Android Studio"],
+      img: "/img/mobile/draw.png",
+      github: "https://github.com/RenijS/Android_DrawingApplication_Kotlin",
+      live: "",
+    },
+    {
+      title: "Shoe Store App",
+      desc: "An app where user can add new item and look through list.",
+      techs: ["Kotlin", "Firebase", "Android Studio"],
+      img: "/img/mobile/instruction.png",
+      github: "https://github.com/RenijS/Android_ShoeStore_Kotlin",
       live: "",
     },
   ];
@@ -109,20 +126,19 @@ export default function Portfolio() {
       <div className="w-full">
         {activeState === "photography" && (
           <div className="flex flex-nowrap gap-6">
-            {photographyInfo.map((info) => {
-              return (
-                <div className="w-64">
-                  <img
-                    src={`img/photography/${info}.jpg`}
-                    alt=""
-                    className="h-full rounded-2xl object-cover"
-                  />
-                </div>
-              );
-            })}
+            <PhotoCard photographyInfo={photographyInfo} />
           </div>
         )}
-        {activeState === "web" && <ProjectCard projInfo={webInfo} />}
+        {activeState === "web" && (
+          <div className="grid grid-cols-2 gap-10">
+            <ProjectCard projInfo={webInfo} activeState={activeState} />
+          </div>
+        )}
+        {activeState === "android" && (
+          <div className="grid grid-cols-3 gap-10">
+            <ProjectCard projInfo={mobInfo} activeState={activeState} />
+          </div>
+        )}
       </div>
     </div>
   );
