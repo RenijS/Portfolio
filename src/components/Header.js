@@ -8,14 +8,26 @@ export default function Header() {
         .classList.remove("absolute", "text-white");
       document
         .querySelector("#header-card")
-        .classList.add("bg-white", "fixed", "text-black");
+        .classList.add(
+          "bg-white",
+          "fixed",
+          "text-black",
+          "border-b",
+          "border-gray-400"
+        );
     } else {
       document
         .querySelector("#header-card")
         .classList.add("absolute", "text-white");
       document
         .querySelector("#header-card")
-        .classList.remove("bg-white", "fixed", "text-black");
+        .classList.remove(
+          "bg-white",
+          "fixed",
+          "text-black",
+          "border-b",
+          "border-gray-200"
+        );
     }
   };
   return (

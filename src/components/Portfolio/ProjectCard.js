@@ -51,8 +51,8 @@ export default function ProjectCard(props) {
                 </div>
               </div>
             </div>
-            <p>{info.title}</p>
-            <span>{info.desc}</span>
+            <p className="text-xl">{info.title}</p>
+            <span className="text-slate-500">{info.desc}</span>
           </div>
         );
       })}

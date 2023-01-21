@@ -24,7 +24,6 @@ export default function WorkCard(props) {
           </span>
         </div>
         <span>
-          {" "}
           <FontAwesomeIcon icon={faCalendarDays} /> {props.exp.date}
         </span>
       </div>

@@ -24,7 +24,7 @@ export default function Contact() {
   };
 
   return (
-    <div id="contact-sect" className="text-lg">
+    <div id="contact-sect" className="text-lg mb-9">
       <h1 className="text-5xl text-center mb-9">Contact Me</h1>
       <div className="flex gap-9 ">
         <div className="w-1/2">

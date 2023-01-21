@@ -28,7 +28,7 @@ export default function Resume() {
     },
   ];
   return (
-    <div id="resume-section">
+    <div id="resume-section" className="mb-9">
       <h3 className=" text-5xl text-black text-center mb-9">Resume</h3>
       <div className="flex gap-16">
         <div id="img-contain" className="">

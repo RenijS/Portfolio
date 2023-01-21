@@ -1,6 +1,5 @@
 import Header from "./components/Header";
 import Top from "./components/Top";
-import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";

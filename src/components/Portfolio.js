@@ -86,12 +86,12 @@ export default function Portfolio() {
     },
   ];
 
-  const photographyInfo = ["p1", "p2", "p3", "p4", "p5"];
+  const photographyInfo = ["p1", "p2", "p3", "p4", "p5", "p6"];
 
   return (
-    <div id="portfolio-sect" className="flex flex-col items-center">
-      <h2 className="text-5xl text-black mb-9">My Portfolio</h2>
-      <ul id="portfolio-opts" className="flex gap-6 text-slate-400">
+    <div id="portfolio-sect" className="flex flex-col items-center mb-9">
+      <h2 className="text-5xl text-black mb-6">My Portfolio</h2>
+      <ul id="portfolio-opts" className="flex gap-6 text-slate-400 mb-6">
         <li
           onClick={() => onOptClicked("web")}
           className={
@@ -125,7 +125,7 @@ export default function Portfolio() {
       </ul>
       <div className="w-full">
         {activeState === "photography" && (
-          <div className="flex flex-nowrap gap-6">
+          <div className="flex flex-wrap gap-6">
             <PhotoCard photographyInfo={photographyInfo} />
           </div>
         )}
