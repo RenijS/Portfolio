@@ -11,9 +11,12 @@ export default function TopElements() {
         </div>
         <span>Hello</span>
         <span>I'm Renij Shrestha</span>
-        <button className="w-full py-1 border border-zinc-400 rounded-xl">
+        <a
+          href="#portfolio-sect"
+          className="w-full py-1 border border-zinc-400 rounded-xl text-center"
+        >
           View <FontAwesomeIcon icon={faArrowDown} />
-        </button>
+        </a>
       </div>
       <span className="w-96 tracking-wide italic text-gray-300">
         Recent IT graduate with a keen interest in software engineering.

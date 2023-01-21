@@ -35,17 +35,26 @@ export default function Header() {
       id="header-card"
       className="flex justify-between items-center text-white w-full absolute py-2 z-10"
     >
-      <div
+      <a
         id="logo"
         className="ml-6 py-0.5 px-1 border border-zinc-400 font-bold"
+        href="/"
       >
         RS
-      </div>
+      </a>
       <ul id="header-list" className="w-128 flex justify-evenly">
-        <li>Home</li>
-        <li>Portfolio</li>
-        <li>Resume</li>
-        <li>Contact</li>
+        <li className="hover:border-b border-blue-200">
+          <a href="#top-card">Home</a>
+        </li>
+        <li className="hover:border-b border-blue-200">
+          <a href="#portfolio-sect">Portfolio</a>
+        </li>
+        <li className="hover:border-b border-blue-200">
+          <a href="#resume-section">Resume</a>
+        </li>
+        <li className="hover:border-b border-blue-200">
+          <a href="#contact-sect">Contact</a>
+        </li>
       </ul>
     </div>
   );
