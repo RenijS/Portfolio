@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import EducationCard from "./Resume/EducationCard";
 import WorkCard from "./Resume/WorkCard";
 
 export default function Resume() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   const experiences = [
     {
       title: "Software Engineering Intern",
@@ -28,7 +34,7 @@ export default function Resume() {
     },
   ];
   return (
-    <div id="resume-section" className="mb-9">
+    <div id="resume-section" className="mb-9" data-aos="fade-up">
       <h3 className=" text-5xl text-black text-center mb-9">Resume</h3>
       <div className="flex gap-16">
         <div id="img-contain" className="">

@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import ProjectCard from "./Portfolio/ProjectCard";
 import PhotoCard from "./Portfolio/PhotoCard";
 
 export default function Portfolio() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   const [activeState, setActiveState] = useState("web");
 
   const onOptClicked = (state) => {
@@ -89,7 +95,11 @@ export default function Portfolio() {
   const photographyInfo = ["p1", "p2", "p3", "p4", "p5", "p6"];
 
   return (
-    <div id="portfolio-sect" className="flex flex-col items-center mb-9">
+    <div
+      id="portfolio-sect"
+      className="flex flex-col items-center mb-9"
+      data-aos="fade-up"
+    >
       <h2 className="text-5xl text-black mb-6">My Portfolio</h2>
       <ul id="portfolio-opts" className="flex gap-6 text-slate-400 mb-6">
         <li

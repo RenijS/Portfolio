@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function Contact() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   const [formInfo, setFormInfo] = useState({
     firstName: "",
     lastName: "",
@@ -24,7 +30,7 @@ export default function Contact() {
   };
 
   return (
-    <div id="contact-sect" className="text-lg mb-9">
+    <div id="contact-sect" className="text-lg mb-9" data-aos="fade-up">
       <h1 className="text-5xl text-center mb-9">Contact Me</h1>
       <div className="flex gap-9 ">
         <div className="w-1/2">

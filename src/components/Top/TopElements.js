@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function TopElements() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
-    <div id="top-ele-container" className="flex flex-row items-center gap-9">
+    <div
+      data-aos="fade-up"
+      id="top-ele-container"
+      className="flex flex-row items-center gap-9"
+    >
       <div className="flex flex-col items-center text-lg">
         <div className="w-48 h-44 rounded-t-full overflow-hidden object-cover">
           <img src="img/myImg.jpg" alt="" />
