@@ -96,8 +96,8 @@ export default function Portfolio() {
           onClick={() => onOptClicked("web")}
           className={
             activeState === "web"
-              ? "text-sky-800 hover:text-sky-800 hover:cursor-pointer"
-              : "hover:text-sky-800 hover:cursor-pointer"
+              ? "text-sky-800 hover:cursor-pointer"
+              : "transition-colors duration-300 hover:text-sky-800 hover:cursor-pointer"
           }
         >
           Web Dev
@@ -106,8 +106,8 @@ export default function Portfolio() {
           onClick={() => onOptClicked("android")}
           className={
             activeState === "android"
-              ? "text-sky-800 hover:text-sky-800 hover:cursor-pointer"
-              : "hover:text-sky-800 hover:cursor-pointer"
+              ? "text-sky-800 hover:cursor-pointer"
+              : "transition-colors duration-300 hover:text-sky-800 hover:cursor-pointer"
           }
         >
           Android Dev
@@ -116,8 +116,8 @@ export default function Portfolio() {
           onClick={() => onOptClicked("photography")}
           className={
             activeState === "photography"
-              ? "text-sky-800 hover:text-sky-800 hover:cursor-pointer"
-              : "hover:text-sky-800 hover:cursor-pointer"
+              ? "text-sky-800 hover:cursor-pointer"
+              : "transition-colors duration-300 hover:text-sky-800 hover:cursor-pointer"
           }
         >
           Photography

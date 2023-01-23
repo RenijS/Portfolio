@@ -12,11 +12,11 @@ export default function ProjectCard(props) {
                 alt=""
                 className={
                   props.activeState === "web"
-                    ? "rounded-2xl h-80 w-full object-cover"
-                    : "rounded-2xl h-114 w-full object-cover"
+                    ? "rounded-2xl h-80 w-full object-cover transition-transform duration-500 group-hover/imgContain:scale-110"
+                    : "rounded-2xl h-114 w-full object-cover group-hover/imgContain:scale-110"
                 }
               />
-              <div className="absolute inset-0 bg-black/[.74] text-white collapse group-hover/imgContain:visible">
+              <div className="absolute inset-0 bg-black/[.74] text-white h-0 collapse transition-all duration-500 group-hover/imgContain:visible group-hover/imgContain:h-full">
                 <div className="grid grid-rows-2 grid-cols-2 h-full text-lg">
                   <a
                     href={info.github}
