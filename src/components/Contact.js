@@ -2,7 +2,11 @@ import React, { useState, useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLocationDot,
+  faEnvelope,
+  faCircleDown,
+} from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function Contact() {
@@ -81,7 +85,9 @@ export default function Contact() {
                 required
               ></textarea>
             </div>
-            <button className="w-max">Send</button>
+            <button className="w-max bg-blue-200 border border-solid border-gray-300 rounded-lg px-6 py-1">
+              Send
+            </button>
           </form>
         </div>
         <div className="flex justify-center w-1/2">
@@ -93,14 +99,19 @@ export default function Contact() {
             <div>
               <FontAwesomeIcon icon={faEnvelope} /> renijshrestha8@gmail.com
             </div>
-            <div>
+            <div className="hover:text-sky-700">
               <a href="https://www.linkedin.com/in/renij-shrestha-a2ab53210/">
                 <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
               </a>
             </div>
-            <div>
+            <div className="hover:text-sky-700">
               <a href="https://github.com/RenijS">
                 <FontAwesomeIcon icon={faGithub} /> Github
+              </a>
+            </div>
+            <div className="hover:text-sky-700">
+              <a href="file/" download={"renijShrestha.pdf"}>
+                <FontAwesomeIcon icon={faCircleDown} /> Download CV
               </a>
             </div>
           </div>

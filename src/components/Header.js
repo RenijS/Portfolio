@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   window.onscroll = () => {
@@ -54,6 +56,12 @@ export default function Header() {
         </li>
         <li className="hover:border-b border-blue-200">
           <a href="#contact-sect">Contact</a>
+        </li>
+        <li className="hover:border-b border-blue-200">
+          <a href="file/" download={"renijShrestha.pdf"}>
+            <FontAwesomeIcon icon={faCircleDown} className="mr-2" />
+            CV
+          </a>
         </li>
       </ul>
     </div>
