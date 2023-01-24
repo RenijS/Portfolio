@@ -36,8 +36,8 @@ export default function Contact() {
   return (
     <div id="contact-sect" className="text-lg mb-9" data-aos="fade-up">
       <h1 className="text-5xl text-center mb-9">Contact Me</h1>
-      <div className="flex gap-9 ">
-        <div className="w-1/2">
+      <div className="flex flex-col-reverse md:flex-row gap-9 ">
+        <div className="w-full md:w-1/2">
           <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
             <div className="flex w-full gap-10">
               <div className="flex flex-col w-full">
@@ -90,9 +90,8 @@ export default function Contact() {
             </button>
           </form>
         </div>
-        <div className="flex justify-center w-1/2">
-          <div className="flex flex-col gap-6">
-            <span className="text-2xl">Contact Info</span>
+        <div className="flex justify-center w-full md:w-1/2">
+          <div className="flex flex-wrap md:flex-col gap-6">
             <div>
               <FontAwesomeIcon icon={faLocationDot} /> Melbourne, Australia
             </div>

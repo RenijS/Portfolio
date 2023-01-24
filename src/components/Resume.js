@@ -37,14 +37,14 @@ export default function Resume() {
     <div id="resume-section" className="mb-9" data-aos="fade-up">
       <h3 className=" text-5xl text-black text-center mb-9">Resume</h3>
       <div className="flex gap-16">
-        <div id="img-contain" className="">
+        <div id="img-contain" className="w-2/4 xmd:hidden">
           <img
-            src="/img/test.jpg"
+            src="/img/myImg2.jpg"
             alt=""
-            className="max-h-screen w-full object-cover"
+            className="max-h-screen w-full h-144 object-cover"
           />
         </div>
-        <div id="resume-info" className="w-3/4">
+        <div id="resume-info" className="w-full">
           <div>
             <h3 className="text-3xl text-black mb-6">Work Experience</h3>
             {experiences.length != 0 &&

@@ -42,7 +42,7 @@ export default function ProjectCard(props) {
                   )}
                   <div className="col-span-2 flex flex-col justify-center items-center border-t-4 border-gray-400">
                     <span className="">Tech Used:</span>
-                    <ul className="flex gap-4">
+                    <ul className="flex gap-4 flex-nowrap justify-center">
                       {info.techs.map((tech) => (
                         <li>{tech}</li>
                       ))}

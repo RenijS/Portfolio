@@ -11,6 +11,10 @@ module.exports = {
         128: "32rem",
         144: "36rem",
       },
+      screens: {
+        xmd: { max: "900px" },
+        xsm: { max: "630px" },
+      },
     },
   },
   plugins: [],

@@ -140,12 +140,12 @@ export default function Portfolio() {
           </div>
         )}
         {activeState === "web" && (
-          <div className="grid grid-cols-2 gap-10">
+          <div className="grid md:grid-cols-2 gap-10">
             <ProjectCard projInfo={webInfo} activeState={activeState} />
           </div>
         )}
         {activeState === "android" && (
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             <ProjectCard projInfo={mobInfo} activeState={activeState} />
           </div>
         )}
