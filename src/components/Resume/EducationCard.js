@@ -12,7 +12,7 @@ export default function EducationCard(props) {
       id="education-card"
       className="flex flex-col gap-3 mb-4 pb-4 border-b-2"
     >
-      <div className="flex justify-between">
+      <div className="flex justify-between flex-wrap">
         <span className="text-black text-xl">{props.edu.degree}</span>
         <span className="flex items-center">
           <FontAwesomeIcon icon={faGraduationCap} />
@@ -20,7 +20,7 @@ export default function EducationCard(props) {
         </span>
       </div>
 
-      <div className="flex justify-between">
+      <div className="flex justify-between flex-wrap">
         <span className="flex items-center">
           <FontAwesomeIcon icon={faSchool} />
           {props.edu.school}

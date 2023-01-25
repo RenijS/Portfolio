@@ -9,12 +9,14 @@ import {
 export default function WorkCard(props) {
   return (
     <div id="work-card" className="flex flex-col gap-3 mb-4 pb-4 border-b-2">
-      <div className="flex justify-between">
+      <div className="flex justify-between flex-wrap">
         <span className="text-xl text-black">{props.exp.title}</span>
-        <span className="text-sky-700">{props.exp.employment}</span>
+        <span className="text-sky-700 xsmall:hidden">
+          {props.exp.employment}
+        </span>
       </div>
-      <div className="flex justify-between">
-        <div className="flex gap-10">
+      <div className="flex justify-between flex-wrap">
+        <div className="flex gap-10 flex-wrap">
           <span className="flex items-center">
             <FontAwesomeIcon icon={faBuilding} /> {props.exp.company}
           </span>

@@ -1,8 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleDown } from "@fortawesome/free-solid-svg-icons";
+import { faCircleDown, faBars } from "@fortawesome/free-solid-svg-icons";
 
-export default function Header() {
+export default function Header(props) {
   window.onscroll = () => {
     if (window.pageYOffset > document.querySelector("#header-card").offsetTop) {
       document
@@ -44,7 +44,7 @@ export default function Header() {
       >
         RS
       </a>
-      <ul id="header-list" className="w-128 flex justify-evenly">
+      <ul id="header-list" className="w-128 hidden sm:flex justify-evenly">
         <li className="hover:border-b border-blue-200">
           <a href="#top-card">Home</a>
         </li>
@@ -64,6 +64,11 @@ export default function Header() {
           </a>
         </li>
       </ul>
+      <FontAwesomeIcon
+        icon={faBars}
+        className="mr-4 h-5 sm:hidden"
+        onClick={props.onNavChanged}
+      />
     </div>
   );
 }

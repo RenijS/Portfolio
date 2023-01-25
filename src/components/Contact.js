@@ -91,7 +91,7 @@ export default function Contact() {
           </form>
         </div>
         <div className="flex justify-center w-full md:w-1/2">
-          <div className="flex flex-wrap md:flex-col gap-6">
+          <div className="flex flex-wrap justify-center gap-6 md:flex-col">
             <div>
               <FontAwesomeIcon icon={faLocationDot} /> Melbourne, Australia
             </div>
