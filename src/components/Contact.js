@@ -8,29 +8,41 @@ import {
   faCircleDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
 
-  const [formInfo, setFormInfo] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    message: "",
-  });
-
-  const handleInfoChange = (e) => {
-    setFormInfo((prevState) => ({
-      ...prevState,
-      [e.target.name]: e.target.value,
-    }));
+  const clearInputs = () => {
+    const form = document.querySelector("form");
+    const inputs = form.querySelectorAll(".inputField");
+    console.log(inputs);
+    for (let element of inputs) {
+      element.value = "";
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formInfo);
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        e.target,
+        process.env.REACT_APP_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("Email Sent");
+          clearInputs();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -43,45 +55,41 @@ export default function Contact() {
               <div className="flex flex-col w-full">
                 <label htmlFor="firstName">First Name</label>
                 <input
+                  className="inputField"
                   type="text"
                   name="firstName"
                   id="firstName"
-                  onChange={handleInfoChange}
-                  value={formInfo.firstName}
                   required
                 />
               </div>
               <div className="flex flex-col w-full">
                 <label htmlFor="lastName">Last Name</label>
                 <input
+                  className="inputField"
                   type="text"
                   name="lastName"
                   id="lastName"
-                  onChange={handleInfoChange}
-                  value={formInfo.lastName}
                 />
               </div>
             </div>
             <div className="flex flex-col">
               <label htmlFor="email">Email</label>
               <input
+                className="inputField"
                 type="email"
                 name="email"
                 id="email"
-                onChange={handleInfoChange}
-                value={formInfo.email}
                 required
               />
             </div>
             <div className="flex flex-col">
               <label htmlFor="msg">Message</label>
               <textarea
+                className="inputField"
                 name="message"
                 id="msg"
                 cols="10"
                 rows="5"
-                onChange={handleInfoChange}
-                value={formInfo.message}
                 required
               ></textarea>
             </div>
