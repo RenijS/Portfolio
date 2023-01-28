@@ -49,10 +49,10 @@ export default function Header(props) {
           <a href="#top-card">Home</a>
         </li>
         <li className="hover:border-b border-blue-200">
-          <a href="#portfolio-sect">Portfolio</a>
+          <a href="#resume-section">Resume</a>
         </li>
         <li className="hover:border-b border-blue-200">
-          <a href="#resume-section">Resume</a>
+          <a href="#portfolio-sect">Portfolio</a>
         </li>
         <li className="hover:border-b border-blue-200">
           <a href="#contact-sect">Contact</a>

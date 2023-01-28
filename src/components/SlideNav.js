@@ -30,10 +30,10 @@ export default function SlideNav(props) {
             <a href="#top-card">Home</a>
           </li>
           <li className=" w-max" onClick={props.onNavChanged}>
-            <a href="#portfolio-sect">Portfolio</a>
+            <a href="#resume-section">Resume</a>
           </li>
           <li className=" w-max" onClick={props.onNavChanged}>
-            <a href="#resume-section">Resume</a>
+            <a href="#portfolio-sect">Portfolio</a>
           </li>
           <li className=" w-max" onClick={props.onNavChanged}>
             <a href="#contact-sect">Contact</a>

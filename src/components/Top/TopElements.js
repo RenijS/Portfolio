@@ -10,29 +10,34 @@ export default function TopElements() {
   }, []);
 
   return (
-    <div
-      data-aos="fade-up"
-      id="top-ele-container"
-      className="flex flex-row items-center gap-9"
-    >
-      <div className="flex flex-col items-center text-lg xsm:text-4xl">
-        <div className="w-48 h-44 rounded-t-full overflow-hidden object-cover xsm:w-72 xsm:h-64">
-          <img src="img/myImg.jpg" alt="" />
+    <>
+      <div
+        data-aos="fade-up"
+        id="top-ele-container"
+        className="flex flex-row items-center gap-9"
+      >
+        <div className="flex flex-col items-center text-lg xsm:text-4xl">
+          <div className="w-48 h-44 rounded-t-full overflow-hidden object-cover xsm:w-72 xsm:h-64">
+            <img src="img/myImg.jpg" alt="" />
+          </div>
+          <span className="mt-1">Hello</span>
+          <span>I'm Renij Shrestha</span>
         </div>
-        <span className="mt-1">Hello</span>
-        <span>I'm Renij Shrestha</span>
-        <a
-          href="#portfolio-sect"
-          className="w-full py-1 mt-2 border border-zinc-400 rounded-xl text-center"
+        <span
+          className="w-96 tracking-wide italic text-gray-300 xsm:hidden"
+          data-aos="fade-right"
         >
-          View <FontAwesomeIcon icon={faArrowDown} />
-        </a>
+          Recent IT graduate with a keen interest in software engineering.
+          Developed and demonstrated a reliable work ethic and adaptability
+          through work and university experience.
+        </span>
       </div>
-      <span className="w-96 tracking-wide italic text-gray-300 xsm:hidden">
-        Recent IT graduate with a keen interest in software engineering.
-        Developed and demonstrated a reliable work ethic and adaptability
-        through work and university experience.
-      </span>
-    </div>
+      <a
+        href="#resume-section"
+        className="w-1/2 md:w-1/3 py-2 mt-2 rounded-xl text-center text-xl bg-black/50 hover:shadow-md hover:shadow-gray-800"
+      >
+        View <FontAwesomeIcon icon={faArrowDown} />
+      </a>
+    </>
   );
 }

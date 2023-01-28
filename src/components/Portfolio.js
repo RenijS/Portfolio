@@ -53,7 +53,6 @@ export default function Portfolio() {
         "CSS",
         "Tasty API",
         "Font Awesome",
-        ,
       ],
       img: "img/web/rc.png",
       github: "https://github.com/RenijS/RecipeCurious",
@@ -113,13 +112,13 @@ export default function Portfolio() {
   const photographyInfo = ["p1", "p2", "p3", "p4", "p5", "p6"];
 
   return (
-    <div
-      id="portfolio-sect"
-      className="flex flex-col items-center mb-9"
-      data-aos="fade-up"
-    >
+    <div id="portfolio-sect" className="flex flex-col items-center pt-10">
       <h2 className="text-5xl text-black mb-6">My Portfolio</h2>
-      <ul id="portfolio-opts" className="flex gap-6 text-slate-400 mb-6">
+      <ul
+        id="portfolio-opts"
+        className="flex gap-6 text-slate-400 mb-6"
+        data-aos="fade-up"
+      >
         <li
           onClick={() => onOptClicked("web")}
           className={
@@ -151,7 +150,7 @@ export default function Portfolio() {
           Photography
         </li>
       </ul>
-      <div className="w-full">
+      <div className="w-full" data-aos="fade-up">
         {activeState === "photography" && (
           <div className="flex flex-wrap gap-6">
             <PhotoCard photographyInfo={photographyInfo} />

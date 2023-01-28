@@ -34,9 +34,9 @@ export default function Resume() {
     },
   ];
   return (
-    <div id="resume-section" className="mb-9" data-aos="fade-up">
+    <div id="resume-section" className="pt-10">
       <h3 className=" text-5xl text-black text-center mb-9">Resume</h3>
-      <div className="flex gap-16">
+      <div className="flex gap-16" data-aos="fade-up">
         <div id="img-contain" className="w-2/4 xmd:hidden">
           <img
             src="/img/myImg2.jpg"

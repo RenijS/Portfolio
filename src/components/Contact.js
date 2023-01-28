@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
@@ -11,10 +9,6 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
-
   const clearInputs = () => {
     const form = document.querySelector("form");
     const inputs = form.querySelectorAll(".inputField");
@@ -46,7 +40,7 @@ export default function Contact() {
   };
 
   return (
-    <div id="contact-sect" className="text-lg mb-9" data-aos="fade-up">
+    <div id="contact-sect" className="text-lg pb-9 pt-10">
       <h1 className="text-5xl text-center mb-9">Contact Me</h1>
       <div className="flex flex-col-reverse md:flex-row gap-9 ">
         <div className="w-full md:w-1/2">
@@ -93,7 +87,7 @@ export default function Contact() {
                 required
               ></textarea>
             </div>
-            <button className="w-max bg-blue-200 border border-solid border-gray-300 rounded-lg px-6 py-1">
+            <button className="w-max bg-blue-200 border border-solid border-gray-300 rounded-lg px-6 py-1 hover:shadow-md">
               Send
             </button>
           </form>
