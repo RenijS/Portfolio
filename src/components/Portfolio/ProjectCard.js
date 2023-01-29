@@ -1,58 +1,81 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function ProjectCard(props) {
   return (
     <>
       {props.projInfo.map((info) => {
         return (
-          <div className="text-center">
-            <div className="relative p-6 bg-blue-200 rounded-3xl overflow-hidden group/imgContain">
-              <img
-                src={info.img}
-                alt=""
-                className={
-                  props.activeState === "web"
-                    ? "rounded-2xl h-80 w-full object-cover transition-transform duration-500 group-hover/imgContain:scale-110"
-                    : "rounded-2xl h-114 w-full object-cover group-hover/imgContain:scale-110"
-                }
-              />
-              <div className="absolute inset-0 bg-black/[.74] text-white h-0 collapse transition-all duration-500 group-hover/imgContain:visible group-hover/imgContain:h-full">
-                <div className="grid grid-rows-2 grid-cols-2 h-full text-lg">
-                  <a
-                    href={info.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
+          <div className="text-center bg-blue-200 rounded-3xl p-2 group/imgContain">
+            <div className="relative p-5  rounded-3xl overflow-hidden">
+              {info.live !== "" && (
+                <a href={info.live}>
+                  <img
+                    src={info.img}
+                    alt=""
                     className={
-                      info.live !== ""
-                        ? "flex justify-center items-center hover:cursor-pointer hover:text-xl hover:underline"
-                        : "col-span-2 flex justify-center items-center hover:cursor-pointer hover:text-xl hover:underline"
+                      props.activeState === "web"
+                        ? "rounded-2xl h-80 w-full object-cover transition-transform duration-500 group-hover/imgContain:scale-105"
+                        : "rounded-2xl h-114 w-full object-cover transition-transform duration-500 group-hover/imgContain:scale-105"
                     }
-                  >
-                    <span className="">Github</span>
-                  </a>
+                  />
+                </a>
+              )}
+              {info.live == "" && (
+                <img
+                  src={info.img}
+                  alt=""
+                  className={
+                    props.activeState === "web"
+                      ? "rounded-2xl h-80 w-full object-cover transition-transform duration-500 group-hover/imgContain:scale-105"
+                      : "rounded-2xl h-114 w-full object-cover transition-transform duration-500 group-hover/imgContain:scale-105"
+                  }
+                />
+              )}
+            </div>
+            <div className="px-5 flex flex-col gap-1">
+              <div className="flex justify-between">
+                <p className="text-xl font-medium">{info.title}</p>
+                <div>
                   {info.live !== "" && (
                     <a
                       href={info.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex justify-center items-center border-l-4 border-gray-400 hover:cursor-pointer hover:text-xl hover:underline"
+                      className="mr-4"
                     >
-                      <span className="">Live Preview</span>
+                      <FontAwesomeIcon
+                        icon={faGlobe}
+                        className="h-5 hover:text-sky-700"
+                      />
                     </a>
                   )}
-                  <div className="col-span-2 flex flex-col justify-center items-center border-t-4 border-gray-400 ">
-                    <span className="">Tech Used:</span>
-                    <ul className="flex gap-4 flex-wrap justify-center">
-                      {info.techs.map((tech) => (
-                        <li>{tech}</li>
-                      ))}
-                    </ul>
-                  </div>
+                  <a
+                    href={info.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      icon={faGithub}
+                      className="h-5 hover:text-sky-700"
+                    />
+                  </a>
                 </div>
               </div>
+              <span className="text-slate-600">{info.desc}</span>
+              <div className="flex justify-end items-center text-slate-500 text-sm">
+                <ul className="opacity-0 flex gap-2 transition-opacity duration-500 group-hover/imgContain:opacity-100 ">
+                  {info.techs.map((tech) => (
+                    <li className="inline">{tech}</li>
+                  ))}
+                </ul>
+                <span className="mx-2">
+                  <FontAwesomeIcon icon={faArrowLeft} /> Tech
+                </span>
+              </div>
             </div>
-            <p className="text-xl">{info.title}</p>
-            <span className="text-slate-500">{info.desc}</span>
           </div>
         );
       })}

@@ -34,7 +34,7 @@ export default function TopElements() {
       </div>
       <a
         href="#resume-section"
-        className="w-1/2 md:w-1/3 py-2 mt-2 rounded-xl text-center text-xl bg-black/50 hover:shadow-md hover:shadow-gray-800"
+        className="fixed bottom-0 mb-20 w-1/2 md:w-1/3 py-2 mt-2 rounded-xl text-center text-xl bg-black/50 hover:shadow-md hover:shadow-gray-800"
       >
         View <FontAwesomeIcon icon={faArrowDown} />
       </a>

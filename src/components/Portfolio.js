@@ -85,7 +85,7 @@ export default function Portfolio() {
     },
     {
       title: "Etch A Sketch",
-      desc: "",
+      desc: "A etch a sketch app.",
       techs: ["JavaScript", "HTML", "CSS"],
       img: "img/web/et.png",
       github: "https://github.com/RenijS/Etch_A_Sketch",
@@ -101,7 +101,7 @@ export default function Portfolio() {
     },
     {
       title: "Rock Paper Scissor Game",
-      desc: "",
+      desc: "A rock paper scissor app.",
       techs: ["JavaScript", "HTML", "CSS"],
       img: "img/web/rpc.png",
       github: "https://github.com/RenijS/Rock_Paper_Scissors",
