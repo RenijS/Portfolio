@@ -11,6 +11,7 @@ export default function EducationCard(props) {
     <div
       id="education-card"
       className="flex flex-col gap-3 mb-4 pb-4 border-b-2"
+      key={props.index}
     >
       <div className="flex justify-between flex-wrap">
         <span className="text-black text-xl">{props.edu.degree}</span>

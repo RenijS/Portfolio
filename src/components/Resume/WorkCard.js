@@ -8,7 +8,11 @@ import {
 
 export default function WorkCard(props) {
   return (
-    <div id="work-card" className="flex flex-col gap-3 mb-4 pb-4 border-b-2">
+    <div
+      id="work-card"
+      className="flex flex-col gap-3 mb-4 pb-4 border-b-2"
+      key={props.index}
+    >
       <div className="flex justify-between flex-wrap">
         <span className="text-xl text-black">{props.exp.title}</span>
         <span className="text-sky-700 xsmall:hidden">

@@ -6,9 +6,12 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 export default function ProjectCard(props) {
   return (
     <>
-      {props.projInfo.map((info) => {
+      {props.projInfo.map((info, index) => {
         return (
-          <div className="text-center bg-blue-200 rounded-3xl p-2 group/imgContain">
+          <div
+            className="text-center bg-blue-200 rounded-3xl p-2 group/imgContain"
+            key={index}
+          >
             <div className="relative p-5  rounded-3xl overflow-hidden">
               {info.live !== "" && (
                 <a href={info.live}>
@@ -23,7 +26,7 @@ export default function ProjectCard(props) {
                   />
                 </a>
               )}
-              {info.live == "" && (
+              {info.live === "" && (
                 <img
                   src={info.img}
                   alt=""
@@ -65,10 +68,12 @@ export default function ProjectCard(props) {
                 </div>
               </div>
               <span className="text-slate-600">{info.desc}</span>
-              <div className="flex justify-end items-center text-slate-500 text-sm">
+              <div className="hidden justify-end items-center text-slate-500 text-sm xl:flex">
                 <ul className="opacity-0 flex gap-2 transition-opacity duration-500 group-hover/imgContain:opacity-100 ">
-                  {info.techs.map((tech) => (
-                    <li className="inline">{tech}</li>
+                  {info.techs.map((tech, index) => (
+                    <li className="inline" key={index}>
+                      {tech}
+                    </li>
                   ))}
                 </ul>
                 <span className="mx-2">

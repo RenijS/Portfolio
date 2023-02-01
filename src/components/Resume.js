@@ -47,16 +47,16 @@ export default function Resume() {
         <div id="resume-info" className="w-full">
           <div>
             <h3 className="text-3xl text-black mb-6">Work Experience</h3>
-            {experiences.length != 0 &&
-              experiences.map((exp) => {
-                return <WorkCard exp={exp} />;
+            {experiences.length !== 0 &&
+              experiences.map((exp, index) => {
+                return <WorkCard exp={exp} index={index} />;
               })}
           </div>
           <div>
             <h3 className="text-3xl text-black mb-6">Education</h3>
-            {education.length != 0 &&
-              education.map((edu) => {
-                return <EducationCard edu={edu} />;
+            {education.length !== 0 &&
+              education.map((edu, index) => {
+                return <EducationCard edu={edu} index={index} />;
               })}
           </div>
         </div>
