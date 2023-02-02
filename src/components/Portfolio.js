@@ -109,7 +109,7 @@ export default function Portfolio() {
     },
   ];
 
-  const photographyInfo = ["p1", "p2", "p3", "p4", "p5", "p6"];
+  const photographyInfo = ["p1", "p2", "p3", "p4", "p6", "p5"];
 
   return (
     <div id="portfolio-sect" className="flex flex-col items-center pt-10">
@@ -152,7 +152,7 @@ export default function Portfolio() {
       </ul>
       <div className="w-full" data-aos="fade-up">
         {activeState === "photography" && (
-          <div className="flex flex-wrap gap-6">
+          <div className="flex flex-wrap gap-6 justify-center">
             <PhotoCard photographyInfo={photographyInfo} />
           </div>
         )}
