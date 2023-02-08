@@ -18,7 +18,7 @@ function App() {
       <Header onNavChanged={onNavChanged} />
       {isNavOn && <SlideNav onNavChanged={onNavChanged} />}
       <Top />
-      <div className="px-6 sm:px-8 md:px-14 lg:px-16">
+      <div className="px-4 sm:px-8 md:px-14 lg:px-16">
         <Resume />
         <Portfolio />
         <Contact />

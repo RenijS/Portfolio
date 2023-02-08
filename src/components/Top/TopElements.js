@@ -17,7 +17,7 @@ export default function TopElements() {
         className="flex flex-row items-center gap-9"
       >
         <div className="flex flex-col items-center text-lg xsm:text-4xl">
-          <div className="w-48 h-44 rounded-t-full overflow-hidden object-cover xsm:w-72 xsm:h-64">
+          <div className="w-48 h-44 rounded-t-full overflow-hidden object-cover xsm:w-72 xsm:h-64 xsmall:w-10/12">
             <img src="img/myImg.jpg" alt="" />
           </div>
           <span className="mt-1">Hello</span>
