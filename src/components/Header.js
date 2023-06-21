@@ -58,7 +58,7 @@ export default function Header(props) {
           <a href="#contact-sect">Contact</a>
         </li>
         <li className="hover:border-b border-blue-200">
-          <a href="file/" download={"renijShrestha.pdf"}>
+          <a href="/file/renijShrestha.pdf" download>
             <FontAwesomeIcon icon={faCircleDown} className="mr-2" />
             CV
           </a>
