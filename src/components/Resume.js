@@ -11,11 +11,11 @@ export default function Resume() {
 
   const experiences = [
     {
-      title: "External Student Consultant",
-      employment: "Consultant",
-      company: "Elixir Journeys",
+      title: "Support Specialist",
+      employment: "Contract",
+      company: "Education Horizons",
       location: "Australia",
-      date: "December 2021 – December 2021",
+      date: "July 2023 – February 2024",
     },
     {
       title: "Software Engineering Intern",
