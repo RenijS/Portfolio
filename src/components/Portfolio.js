@@ -56,7 +56,7 @@ export default function Portfolio() {
       ],
       img: "img/web/rc.png",
       github: "https://github.com/RenijS/RecipeCurious",
-      live: "https://clever-mermaid-748d87.netlify.app/",
+      live: "https://recipe-curious.netlify.app/",
     },
     {
       title: "Final year project",
