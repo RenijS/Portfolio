@@ -3,6 +3,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import EducationCard from "./Resume/EducationCard";
 import WorkCard from "./Resume/WorkCard";
+import ImgContainer from "./UI/ImgContainer";
 
 export default function Resume() {
   useEffect(() => {
@@ -44,11 +45,11 @@ export default function Resume() {
     <div id="resume-section" className="pt-10">
       <h3 className=" text-5xl text-black text-center mb-9">Resume</h3>
       <div className="flex gap-16" data-aos="fade-up">
-        <div id="img-contain" className="w-2/4 xmd:hidden">
-          <img
-            src="/img/myImg2.jpg"
-            alt=""
-            className="max-h-screen w-full h-144 object-cover"
+        <div id="img-contain" className="w-2/4 h-144 xmd:hidden">
+          <ImgContainer
+            imgSrc={"/img/myImg2.jpg"}
+            desc="me"
+            imgClass="max-h-screen w-full h-full  object-cover"
           />
         </div>
         <div id="resume-info" className="w-full">

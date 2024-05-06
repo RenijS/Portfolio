@@ -3,6 +3,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 import TopElements from "./Top/TopElements";
+import ImgContainer from "./UI/ImgContainer";
 
 export default function Top() {
   useEffect(() => {
@@ -11,10 +12,13 @@ export default function Top() {
   return (
     <div
       id="top-card"
-      className="min-h-screen bg-cover text-white flex flex-col justify-center items-center"
-      style={{ backgroundImage: "url('/img/test.jpg')" }}
+      className="h-screen text-white flex flex-col justify-center items-center relative"
       data-aos="fade-up"
     >
+      <ImgContainer
+        imgSrc={"/img/test.jpg"}
+        imgClass={"h-full w-full object-cover absolute"}
+      />
       <TopElements />
     </div>
   );

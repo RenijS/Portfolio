@@ -3,6 +3,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import ImgContainer from "../UI/ImgContainer";
 
 export default function TopElements() {
   useEffect(() => {
@@ -18,7 +19,7 @@ export default function TopElements() {
       >
         <div className="flex flex-col items-center text-lg xsm:text-4xl">
           <div className="w-48 h-44 rounded-t-full overflow-hidden object-cover xsm:w-72 xsm:h-64 xsmall:w-10/12">
-            <img src="img/myImg.jpg" alt="" />
+            <ImgContainer imgSrc={"img/myImg.jpg"} desc={"me"} />
           </div>
           <span className="mt-1">Hello</span>
           <span>I'm Renij Shrestha</span>
