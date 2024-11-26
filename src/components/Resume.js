@@ -12,25 +12,32 @@ export default function Resume() {
 
   const experiences = [
     {
+      title: "EMR IT Support",
+      employment: "Contract",
+      company: "Western Health",
+      location: "Australia",
+      date: "November 2024 – Present",
+    },
+    {
+      title: "Support Developer Intern",
+      employment: "Internship",
+      company: "VetCheck",
+      location: "Australia",
+      date: "July 2024 – October 2024",
+    },
+    {
       title: "Support Specialist",
       employment: "Contract",
       company: "Education Horizons",
       location: "Australia",
-      date: "July 2023 – February 2024",
-    },
-    {
-      title: "Software Engineering Intern",
-      employment: "Internship",
-      company: "LanCul Co.",
-      location: "Japan",
-      date: "September 2021 – October 2021",
+      date: "July 2023 – March 2024",
     },
     {
       title: "IT Engineer",
       employment: "Contract",
       company: "ITCS Group",
       location: "Japan",
-      date: "June 2021 - August 2021",
+      date: "May 2021 - August 2021",
     },
   ];
   const education = [
