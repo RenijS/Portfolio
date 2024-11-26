@@ -28,7 +28,8 @@ export default function TopElements() {
           className="w-96 tracking-wide italic text-gray-300 xsm:hidden"
           data-aos="fade-right"
         >
-          Recent IT graduate with a keen interest in software engineering.
+          Motivated and positive IT professional with hands-on experience in
+          technical support, troubleshooting, and software development.
           Developed and demonstrated a reliable work ethic and adaptability
           through work and university experience.
         </span>

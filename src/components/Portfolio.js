@@ -44,6 +44,14 @@ export default function Portfolio() {
 
   const webInfo = [
     {
+      title: "E-commerce Web",
+      desc: "A functional e-commerce website built using React & Redux",
+      techs: ["React", "JavaScript", "HTML", "CSS", "Redux"],
+      img: "img/web/ew.png",
+      github: "https://github.com/RenijS/Ecommerce_web",
+      live: "https://renij-ecommerce.netlify.app/",
+    },
+    {
       title: "RecipeCurious",
       desc: "A recipe website allows users to check various recipes.",
       techs: [
@@ -90,14 +98,6 @@ export default function Portfolio() {
       img: "img/web/et.png",
       github: "https://github.com/RenijS/Etch_A_Sketch",
       live: "https://renijs.github.io/Etch_A_Sketch/",
-    },
-    {
-      title: "Travel Journal",
-      desc: "A simple journal website using form.",
-      techs: ["React", "JavaScript", "HTML", "CSS", "Font Awesome"],
-      img: "img/web/tj.png",
-      github: "https://github.com/RenijS/Travel-Journal",
-      live: "https://stellar-smakager-cb5f0d.netlify.app/",
     },
     {
       title: "Rock Paper Scissor Game",
